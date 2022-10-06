@@ -8,7 +8,7 @@ npm install --save-dev hardhat
 npx hardhat
 
 ## Dependencies
-npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chaihat
+- npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chaihat
 
 ## Compile Smart Contracts
 npx hardhat compile
