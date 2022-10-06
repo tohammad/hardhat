@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
 pragma solidity >= 0.5.0 < 0.9.0;
+import "hardhat/console.sol";   // for debugging
 
 contract Token {
     constructor() {
@@ -14,6 +15,10 @@ contract Token {
     mapping(address=> uint) balances;
 
     function transfer(address to, uint amount) external{
+        // debug
+        console.log("sender balance is %s token", balances[msg.sender]);
+        console.log("sender is sending amount %s to address %s", amount, to);
+
         require(balances[msg.sender] >= amount, "Not enough tokens");
         balances[msg.sender]-= amount;
         balances[to]+= amount;
